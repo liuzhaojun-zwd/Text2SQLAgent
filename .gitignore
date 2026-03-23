@@ -1,0 +1,59 @@
+# Environments
+.env
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Frontend (Node.js/Vue)
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.DS_Store
+frontend/*.local
+frontend/.npm/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+*.sqlite
+.DS_Store
+Thumbs.db
+
+# Database / Milvus
+*.db
+*.sqlite3
+milvus_demo.db
+milvus_demo.db-wal
+milvus_demo.db-shm
+
+# Logs
+logs/
+*.log

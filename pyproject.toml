@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "text_to_sql"
+version = "0.1.0"
+description = "基于大模型和向量数据库的 Text2SQL 智能问答系统"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "langgraph>=0.1.0",
+    "langchain>=0.2.0",
+    "langchain-openai>=0.1.0",
+    "pymilvus==2.5.5",
+    "milvus-lite==2.5.1",
+    "zhipuai>=2.1.5",
+    "sqlalchemy>=2.0.0",
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.29.0",
+    "redis>=5.0.0",
+    "jieba>=0.42.1",
+    "scipy>=1.13.0",
+    "pymysql>=1.1.0",
+    "cryptography>=42.0.0",
+    "pydantic>=2.7.0",
+    "pydantic-settings>=2.2.0",
+    "sqlparse>=0.5.0"
+]

@@ -1,0 +1,102 @@
+[
+    {
+        "query": "查询上个月支付金额大于1000的订单及其关联的用户信息",
+        "ground_truth_tables": ["orders", "users"],
+        "ground_truth_columns": ["orders.order_id", "orders.user_id", "orders.total_amount", "orders.status", "orders.created_at", "users.user_id", "users.username"]
+    },
+    {
+        "query": "统计各个部门的平均薪资和员工总数",
+        "ground_truth_tables": ["departments", "employees"],
+        "ground_truth_columns": ["departments.dept_id", "departments.dept_name", "employees.emp_id", "employees.dept_id", "employees.salary"]
+    },
+    {
+        "query": "找出库存数量低于安全预警线的商品，并显示它们所属的仓库位置",
+        "ground_truth_tables": ["inventory", "products", "warehouses"],
+        "ground_truth_columns": ["inventory.product_id", "inventory.warehouse_id", "inventory.stock_quantity", "inventory.safety_stock", "products.product_id", "products.product_name", "warehouses.warehouse_id", "warehouses.location"]
+    },
+    {
+        "query": "列出所有正在休假（休假类型为年假）的员工姓名及其所属部门经理的姓名",
+        "ground_truth_tables": ["employees", "departments", "leave_records"],
+        "ground_truth_columns": ["leave_records.emp_id", "leave_records.leave_type", "leave_records.status", "employees.emp_id", "employees.first_name", "employees.last_name", "employees.dept_id", "departments.dept_id", "departments.manager_id"]
+    },
+    {
+        "query": "查询昨天所有状态为'已发货'的订单所对应的物流轨迹信息",
+        "ground_truth_tables": ["orders", "logistics_tracking"],
+        "ground_truth_columns": ["orders.order_id", "orders.status", "orders.updated_at", "logistics_tracking.order_id", "logistics_tracking.status", "logistics_tracking.location"]
+    },
+    {
+        "query": "计算2023年度销量排名前五的商品分类及其总销售额",
+        "ground_truth_tables": ["order_items", "products", "categories", "orders"],
+        "ground_truth_columns": ["orders.order_id", "orders.created_at", "orders.status", "order_items.order_id", "order_items.product_id", "order_items.quantity", "order_items.price", "products.product_id", "products.category_id", "categories.category_id", "categories.category_name"]
+    },
+    {
+        "query": "查看北京仓库最近一周入库的商品明细和供应商信息",
+        "ground_truth_tables": ["warehouses", "inventory_logs", "products", "suppliers"],
+        "ground_truth_columns": ["warehouses.warehouse_id", "warehouses.location", "inventory_logs.warehouse_id", "inventory_logs.product_id", "inventory_logs.log_type", "inventory_logs.created_at", "products.product_id", "products.supplier_id", "suppliers.supplier_id", "suppliers.supplier_name"]
+    },
+    {
+        "query": "筛选出连续三个月绩效评级为A的员工",
+        "ground_truth_tables": ["employees", "performance_reviews"],
+        "ground_truth_columns": ["employees.emp_id", "employees.first_name", "employees.last_name", "performance_reviews.emp_id", "performance_reviews.review_period", "performance_reviews.rating"]
+    },
+    {
+        "query": "找出购买过电子产品但从未购买过服装的VIP用户",
+        "ground_truth_tables": ["users", "orders", "order_items", "products", "categories"],
+        "ground_truth_columns": ["users.user_id", "users.level", "orders.order_id", "orders.user_id", "order_items.order_id", "order_items.product_id", "products.product_id", "products.category_id", "categories.category_id", "categories.category_name"]
+    },
+    {
+        "query": "查询所有商品评价低于3星的订单及其对应的售后处理状态",
+        "ground_truth_tables": ["reviews", "orders", "after_sales"],
+        "ground_truth_columns": ["reviews.order_id", "reviews.product_id", "reviews.rating", "orders.order_id", "after_sales.order_id", "after_sales.status"]
+    },
+    {
+        "query": "列出所有由'张三'审核的采购入库单及其金额",
+        "ground_truth_tables": ["purchase_orders", "employees"],
+        "ground_truth_columns": ["purchase_orders.po_id", "purchase_orders.reviewer_id", "purchase_orders.total_amount", "purchase_orders.status", "employees.emp_id", "employees.first_name", "employees.last_name"]
+    },
+    {
+        "query": "统计各个城市的活跃用户数",
+        "ground_truth_tables": ["users", "user_addresses"],
+        "ground_truth_columns": ["users.user_id", "users.status", "user_addresses.user_id", "user_addresses.city", "user_addresses.is_default"]
+    },
+    {
+        "query": "查询上个月离职员工的平均在职天数",
+        "ground_truth_tables": ["employees"],
+        "ground_truth_columns": ["employees.emp_id", "employees.hire_date", "employees.termination_date", "employees.status"]
+    },
+    {
+        "query": "找出当前所有被冻结的用户账号及其最后一次登录时间",
+        "ground_truth_tables": ["users", "user_logs"],
+        "ground_truth_columns": ["users.user_id", "users.username", "users.status", "user_logs.user_id", "user_logs.action_type", "user_logs.created_at"]
+    },
+    {
+        "query": "查询包含'手机'关键字的商品中，当前库存量最多的前10个",
+        "ground_truth_tables": ["products", "inventory"],
+        "ground_truth_columns": ["products.product_id", "products.product_name", "inventory.product_id", "inventory.stock_quantity"]
+    },
+    {
+        "query": "列出所有迟到超过3次的员工姓名和所属部门",
+        "ground_truth_tables": ["employees", "departments", "attendance_records"],
+        "ground_truth_columns": ["attendance_records.emp_id", "attendance_records.status", "attendance_records.record_date", "employees.emp_id", "employees.first_name", "employees.dept_id", "departments.dept_id", "departments.dept_name"]
+    },
+    {
+        "query": "统计每种支付方式的总交易额",
+        "ground_truth_tables": ["payments"],
+        "ground_truth_columns": ["payments.payment_id", "payments.payment_method", "payments.amount", "payments.status"]
+    },
+    {
+        "query": "查询没有设置默认收货地址的用户列表",
+        "ground_truth_tables": ["users", "user_addresses"],
+        "ground_truth_columns": ["users.user_id", "users.username", "user_addresses.user_id", "user_addresses.is_default"]
+    },
+    {
+        "query": "找出在同一个月内既有调薪记录又有晋升记录的员工",
+        "ground_truth_tables": ["employees", "salary_records", "promotion_records"],
+        "ground_truth_columns": ["employees.emp_id", "salary_records.emp_id", "salary_records.effective_date", "promotion_records.emp_id", "promotion_records.effective_date"]
+    },
+    {
+        "query": "查询所有因为'质量问题'退货的订单，以及相关的供应商名称",
+        "ground_truth_tables": ["after_sales", "order_items", "products", "suppliers"],
+        "ground_truth_columns": ["after_sales.order_id", "after_sales.reason", "after_sales.type", "order_items.order_id", "order_items.product_id", "products.product_id", "products.supplier_id", "suppliers.supplier_id", "suppliers.supplier_name"]
+    }
+]

@@ -1,0 +1,502 @@
+[
+    {
+        "id": 1,
+        "query": "查询suppliers的前10条记录",
+        "ground_truth_sql": "SELECT * FROM suppliers LIMIT 10;"
+    },
+    {
+        "id": 2,
+        "query": "统计所有reviews的数量",
+        "ground_truth_sql": "SELECT COUNT(*) FROM reviews;"
+    },
+    {
+        "id": 3,
+        "query": "查询users的前10条记录",
+        "ground_truth_sql": "SELECT * FROM users LIMIT 10;"
+    },
+    {
+        "id": 4,
+        "query": "查询最新的10条user_addresses记录",
+        "ground_truth_sql": "SELECT * FROM user_addresses ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 5,
+        "query": "找出关联orders和user_logs的数据",
+        "ground_truth_sql": "SELECT * FROM orders t1 JOIN user_logs t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 6,
+        "query": "查询最新的10条orders记录",
+        "ground_truth_sql": "SELECT * FROM orders ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 7,
+        "query": "查询inventory的前10条记录",
+        "ground_truth_sql": "SELECT * FROM inventory LIMIT 10;"
+    },
+    {
+        "id": 8,
+        "query": "查询products的前10条记录",
+        "ground_truth_sql": "SELECT * FROM products LIMIT 10;"
+    },
+    {
+        "id": 9,
+        "query": "查询orders中金额/数值大于100的记录",
+        "ground_truth_sql": "SELECT * FROM orders WHERE amount > 100 LIMIT 10;"
+    },
+    {
+        "id": 10,
+        "query": "查询inventory的前10条记录",
+        "ground_truth_sql": "SELECT * FROM inventory LIMIT 10;"
+    },
+    {
+        "id": 11,
+        "query": "统计所有user_logs的数量",
+        "ground_truth_sql": "SELECT COUNT(*) FROM user_logs;"
+    },
+    {
+        "id": 12,
+        "query": "查询最新的10条products记录",
+        "ground_truth_sql": "SELECT * FROM products ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 13,
+        "query": "查询最新的10条user_addresses记录",
+        "ground_truth_sql": "SELECT * FROM user_addresses ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 14,
+        "query": "统计所有user_logs的数量",
+        "ground_truth_sql": "SELECT COUNT(*) FROM user_logs;"
+    },
+    {
+        "id": 15,
+        "query": "查询reviews的前10条记录",
+        "ground_truth_sql": "SELECT * FROM reviews LIMIT 10;"
+    },
+    {
+        "id": 16,
+        "query": "查询reviews的前10条记录",
+        "ground_truth_sql": "SELECT * FROM reviews LIMIT 10;"
+    },
+    {
+        "id": 17,
+        "query": "按状态分组统计users的数量",
+        "ground_truth_sql": "SELECT status, COUNT(*) FROM users GROUP BY status;"
+    },
+    {
+        "id": 18,
+        "query": "查询inventory的前10条记录",
+        "ground_truth_sql": "SELECT * FROM inventory LIMIT 10;"
+    },
+    {
+        "id": 19,
+        "query": "找出关联order_items和categories的数据",
+        "ground_truth_sql": "SELECT * FROM order_items t1 JOIN categories t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 20,
+        "query": "统计所有categories的数量",
+        "ground_truth_sql": "SELECT COUNT(*) FROM categories;"
+    },
+    {
+        "id": 21,
+        "query": "查询suppliers的前10条记录",
+        "ground_truth_sql": "SELECT * FROM suppliers LIMIT 10;"
+    },
+    {
+        "id": 22,
+        "query": "查询最新的10条orders记录",
+        "ground_truth_sql": "SELECT * FROM orders ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 23,
+        "query": "找出关联leave_records和attendance_records的数据",
+        "ground_truth_sql": "SELECT * FROM leave_records t1 JOIN attendance_records t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 24,
+        "query": "找出关联categories和payments的数据",
+        "ground_truth_sql": "SELECT * FROM categories t1 JOIN payments t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 25,
+        "query": "按状态分组统计payments的数量",
+        "ground_truth_sql": "SELECT status, COUNT(*) FROM payments GROUP BY status;"
+    },
+    {
+        "id": 26,
+        "query": "查询最新的10条performance_reviews记录",
+        "ground_truth_sql": "SELECT * FROM performance_reviews ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 27,
+        "query": "查询products的前10条记录",
+        "ground_truth_sql": "SELECT * FROM products LIMIT 10;"
+    },
+    {
+        "id": 28,
+        "query": "找出关联user_addresses和categories的数据",
+        "ground_truth_sql": "SELECT * FROM user_addresses t1 JOIN categories t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 29,
+        "query": "找出关联products和logistics_tracking的数据",
+        "ground_truth_sql": "SELECT * FROM products t1 JOIN logistics_tracking t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 30,
+        "query": "查询reviews的前10条记录",
+        "ground_truth_sql": "SELECT * FROM reviews LIMIT 10;"
+    },
+    {
+        "id": 31,
+        "query": "查询最新的10条performance_reviews记录",
+        "ground_truth_sql": "SELECT * FROM performance_reviews ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 32,
+        "query": "查询reviews的前10条记录",
+        "ground_truth_sql": "SELECT * FROM reviews LIMIT 10;"
+    },
+    {
+        "id": 33,
+        "query": "找出关联after_sales和salary_records的数据",
+        "ground_truth_sql": "SELECT * FROM after_sales t1 JOIN salary_records t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 34,
+        "query": "查询user_addresses的前10条记录",
+        "ground_truth_sql": "SELECT * FROM user_addresses LIMIT 10;"
+    },
+    {
+        "id": 35,
+        "query": "查询employees的前10条记录",
+        "ground_truth_sql": "SELECT * FROM employees LIMIT 10;"
+    },
+    {
+        "id": 36,
+        "query": "找出关联leave_records和products的数据",
+        "ground_truth_sql": "SELECT * FROM leave_records t1 JOIN products t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 37,
+        "query": "按状态分组统计orders的数量",
+        "ground_truth_sql": "SELECT status, COUNT(*) FROM orders GROUP BY status;"
+    },
+    {
+        "id": 38,
+        "query": "找出关联user_logs和performance_reviews的数据",
+        "ground_truth_sql": "SELECT * FROM user_logs t1 JOIN performance_reviews t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 39,
+        "query": "找出关联user_addresses和employees的数据",
+        "ground_truth_sql": "SELECT * FROM user_addresses t1 JOIN employees t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 40,
+        "query": "查询user_logs的前10条记录",
+        "ground_truth_sql": "SELECT * FROM user_logs LIMIT 10;"
+    },
+    {
+        "id": 41,
+        "query": "查询最新的10条after_sales记录",
+        "ground_truth_sql": "SELECT * FROM after_sales ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 42,
+        "query": "统计所有users的数量",
+        "ground_truth_sql": "SELECT COUNT(*) FROM users;"
+    },
+    {
+        "id": 43,
+        "query": "查询orders中金额/数值大于100的记录",
+        "ground_truth_sql": "SELECT * FROM orders WHERE amount > 100 LIMIT 10;"
+    },
+    {
+        "id": 44,
+        "query": "查询最新的10条employees记录",
+        "ground_truth_sql": "SELECT * FROM employees ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 45,
+        "query": "统计所有reviews的数量",
+        "ground_truth_sql": "SELECT COUNT(*) FROM reviews;"
+    },
+    {
+        "id": 46,
+        "query": "查询最新的10条user_logs记录",
+        "ground_truth_sql": "SELECT * FROM user_logs ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 47,
+        "query": "统计所有categories的数量",
+        "ground_truth_sql": "SELECT COUNT(*) FROM categories;"
+    },
+    {
+        "id": 48,
+        "query": "统计所有users的数量",
+        "ground_truth_sql": "SELECT COUNT(*) FROM users;"
+    },
+    {
+        "id": 49,
+        "query": "查询user_logs的前10条记录",
+        "ground_truth_sql": "SELECT * FROM user_logs LIMIT 10;"
+    },
+    {
+        "id": 50,
+        "query": "找出关联departments和performance_reviews的数据",
+        "ground_truth_sql": "SELECT * FROM departments t1 JOIN performance_reviews t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 51,
+        "query": "找出关联products和salary_records的数据",
+        "ground_truth_sql": "SELECT * FROM products t1 JOIN salary_records t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 52,
+        "query": "找出关联user_logs和users的数据",
+        "ground_truth_sql": "SELECT * FROM user_logs t1 JOIN users t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 53,
+        "query": "查询salary_records的前10条记录",
+        "ground_truth_sql": "SELECT * FROM salary_records LIMIT 10;"
+    },
+    {
+        "id": 54,
+        "query": "找出关联salary_records和products的数据",
+        "ground_truth_sql": "SELECT * FROM salary_records t1 JOIN products t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 55,
+        "query": "找出关联products和categories的数据",
+        "ground_truth_sql": "SELECT * FROM products t1 JOIN categories t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 56,
+        "query": "查询order_items的前10条记录",
+        "ground_truth_sql": "SELECT * FROM order_items LIMIT 10;"
+    },
+    {
+        "id": 57,
+        "query": "统计所有categories的数量",
+        "ground_truth_sql": "SELECT COUNT(*) FROM categories;"
+    },
+    {
+        "id": 58,
+        "query": "查询user_addresses的前10条记录",
+        "ground_truth_sql": "SELECT * FROM user_addresses LIMIT 10;"
+    },
+    {
+        "id": 59,
+        "query": "查询attendance_records的前10条记录",
+        "ground_truth_sql": "SELECT * FROM attendance_records LIMIT 10;"
+    },
+    {
+        "id": 60,
+        "query": "查询最新的10条performance_reviews记录",
+        "ground_truth_sql": "SELECT * FROM performance_reviews ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 61,
+        "query": "按状态分组统计orders的数量",
+        "ground_truth_sql": "SELECT status, COUNT(*) FROM orders GROUP BY status;"
+    },
+    {
+        "id": 62,
+        "query": "找出关联categories和leave_records的数据",
+        "ground_truth_sql": "SELECT * FROM categories t1 JOIN leave_records t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 63,
+        "query": "找出关联user_logs和payments的数据",
+        "ground_truth_sql": "SELECT * FROM user_logs t1 JOIN payments t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 64,
+        "query": "查询departments的前10条记录",
+        "ground_truth_sql": "SELECT * FROM departments LIMIT 10;"
+    },
+    {
+        "id": 65,
+        "query": "查询最新的10条suppliers记录",
+        "ground_truth_sql": "SELECT * FROM suppliers ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 66,
+        "query": "查询最新的10条attendance_records记录",
+        "ground_truth_sql": "SELECT * FROM attendance_records ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 67,
+        "query": "找出关联reviews和after_sales的数据",
+        "ground_truth_sql": "SELECT * FROM reviews t1 JOIN after_sales t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 68,
+        "query": "查询最新的10条departments记录",
+        "ground_truth_sql": "SELECT * FROM departments ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 69,
+        "query": "查询order_items的前10条记录",
+        "ground_truth_sql": "SELECT * FROM order_items LIMIT 10;"
+    },
+    {
+        "id": 70,
+        "query": "统计所有departments的数量",
+        "ground_truth_sql": "SELECT COUNT(*) FROM departments;"
+    },
+    {
+        "id": 71,
+        "query": "统计所有inventory的数量",
+        "ground_truth_sql": "SELECT COUNT(*) FROM inventory;"
+    },
+    {
+        "id": 72,
+        "query": "查询reviews的前10条记录",
+        "ground_truth_sql": "SELECT * FROM reviews LIMIT 10;"
+    },
+    {
+        "id": 73,
+        "query": "查询最新的10条user_logs记录",
+        "ground_truth_sql": "SELECT * FROM user_logs ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 74,
+        "query": "查询categories的前10条记录",
+        "ground_truth_sql": "SELECT * FROM categories LIMIT 10;"
+    },
+    {
+        "id": 75,
+        "query": "查询最新的10条salary_records记录",
+        "ground_truth_sql": "SELECT * FROM salary_records ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 76,
+        "query": "查询after_sales的前10条记录",
+        "ground_truth_sql": "SELECT * FROM after_sales LIMIT 10;"
+    },
+    {
+        "id": 77,
+        "query": "统计所有products的数量",
+        "ground_truth_sql": "SELECT COUNT(*) FROM products;"
+    },
+    {
+        "id": 78,
+        "query": "找出关联user_logs和user_addresses的数据",
+        "ground_truth_sql": "SELECT * FROM user_logs t1 JOIN user_addresses t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 79,
+        "query": "查询最新的10条user_addresses记录",
+        "ground_truth_sql": "SELECT * FROM user_addresses ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 80,
+        "query": "查询salary_records的前10条记录",
+        "ground_truth_sql": "SELECT * FROM salary_records LIMIT 10;"
+    },
+    {
+        "id": 81,
+        "query": "找出关联inventory和user_addresses的数据",
+        "ground_truth_sql": "SELECT * FROM inventory t1 JOIN user_addresses t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 82,
+        "query": "找出关联orders和leave_records的数据",
+        "ground_truth_sql": "SELECT * FROM orders t1 JOIN leave_records t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 83,
+        "query": "统计所有users的数量",
+        "ground_truth_sql": "SELECT COUNT(*) FROM users;"
+    },
+    {
+        "id": 84,
+        "query": "查询inventory_logs的前10条记录",
+        "ground_truth_sql": "SELECT * FROM inventory_logs LIMIT 10;"
+    },
+    {
+        "id": 85,
+        "query": "统计所有departments的数量",
+        "ground_truth_sql": "SELECT COUNT(*) FROM departments;"
+    },
+    {
+        "id": 86,
+        "query": "查询最新的10条reviews记录",
+        "ground_truth_sql": "SELECT * FROM reviews ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 87,
+        "query": "统计所有inventory_logs的数量",
+        "ground_truth_sql": "SELECT COUNT(*) FROM inventory_logs;"
+    },
+    {
+        "id": 88,
+        "query": "找出关联attendance_records和user_logs的数据",
+        "ground_truth_sql": "SELECT * FROM attendance_records t1 JOIN user_logs t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 89,
+        "query": "找出关联logistics_tracking和suppliers的数据",
+        "ground_truth_sql": "SELECT * FROM logistics_tracking t1 JOIN suppliers t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 90,
+        "query": "查询reviews的前10条记录",
+        "ground_truth_sql": "SELECT * FROM reviews LIMIT 10;"
+    },
+    {
+        "id": 91,
+        "query": "找出关联performance_reviews和user_addresses的数据",
+        "ground_truth_sql": "SELECT * FROM performance_reviews t1 JOIN user_addresses t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 92,
+        "query": "查询最新的10条user_logs记录",
+        "ground_truth_sql": "SELECT * FROM user_logs ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 93,
+        "query": "按状态分组统计leave_records的数量",
+        "ground_truth_sql": "SELECT status, COUNT(*) FROM leave_records GROUP BY status;"
+    },
+    {
+        "id": 94,
+        "query": "查询最新的10条users记录",
+        "ground_truth_sql": "SELECT * FROM users ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 95,
+        "query": "查询suppliers的前10条记录",
+        "ground_truth_sql": "SELECT * FROM suppliers LIMIT 10;"
+    },
+    {
+        "id": 96,
+        "query": "查询after_sales的前10条记录",
+        "ground_truth_sql": "SELECT * FROM after_sales LIMIT 10;"
+    },
+    {
+        "id": 97,
+        "query": "查询最新的10条inventory_logs记录",
+        "ground_truth_sql": "SELECT * FROM inventory_logs ORDER BY 1 DESC LIMIT 10;"
+    },
+    {
+        "id": 98,
+        "query": "找出关联user_addresses和orders的数据",
+        "ground_truth_sql": "SELECT * FROM user_addresses t1 JOIN orders t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 99,
+        "query": "找出关联attendance_records和performance_reviews的数据",
+        "ground_truth_sql": "SELECT * FROM attendance_records t1 JOIN performance_reviews t2 ON t1.id = t2.id LIMIT 10;"
+    },
+    {
+        "id": 100,
+        "query": "统计所有inventory的数量",
+        "ground_truth_sql": "SELECT COUNT(*) FROM inventory;"
+    }
+]
