@@ -74,31 +74,38 @@ pip install .
 
 ## 启动项目
 
-### 使用 Docker 部署 (推荐)
+### 使用 Docker 部署数据库 (推荐)
 
 本项目依赖 MySQL 和 Milvus 数据库。你可以使用 Docker 快速拉起这些基础设施：
 
 **1. 部署 MySQL**
 ```bash
+# 拉取并启动 MySQL 容器
 docker run -d \
   --name text2sql-mysql \
   -p 3306:3306 \
   -e MYSQL_ROOT_PASSWORD=123456 \
   -e MYSQL_DATABASE=text2sql \
   mysql:8.0
+
+# 查看 MySQL 容器运行状态
+docker ps | grep text2sql-mysql
 ```
 
 **2. 部署 Milvus (单机版)**
-为了避免 Docker Hub 限制，你可以使用以下代理镜像拉取 Milvus 并启动（具体参考 Milvus 官方单机部署脚本或 docker-compose）：
+推荐使用官方的 docker-compose 脚本来启动 Milvus 及其相关组件（如 etcd、minio 等）：
 ```bash
 # 下载官方 docker-compose.yml
 wget https://github.com/milvus-io/milvus/releases/download/v2.4.9/milvus-standalone-docker-compose.yml -O docker-compose.yml
 
 # 如果网络受限，可修改 docker-compose.yml 中的 image 源，例如：
-# image: docker.m.daocloud.io/milvusdb/milvus:v2.4.9
+# sed -i 's/milvusdb\/milvus:v2.4.9/docker.m.daocloud.io\/milvusdb\/milvus:v2.4.9/g' docker-compose.yml
 
-# 启动 Milvus
+# 启动 Milvus 服务
 sudo docker-compose up -d
+
+# 查看 Milvus 容器运行状态
+sudo docker-compose ps
 ```
 
 ---
